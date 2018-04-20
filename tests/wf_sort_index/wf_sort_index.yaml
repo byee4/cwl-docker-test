@@ -1,0 +1,6 @@
+#!/usr/bin/env wf_sort_index.cwl
+
+bam_file:
+  class: File
+  path: inputs/merged.r2.bam
+
