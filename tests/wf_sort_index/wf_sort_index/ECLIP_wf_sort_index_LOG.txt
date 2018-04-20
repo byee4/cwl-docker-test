@@ -1,0 +1,286 @@
+/projects/ps-yeolab/software/eclipconda/envs/eclip-0.2.1/bin/cwltool 1.0.20180306140409
+Resolved '/home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl' to 'file:///home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl'
+No handlers could be found for logger "rdflib.term"
+[workflow wf_sort_index.cwl] initialized from file:///home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl
+[workflow wf_sort_index.cwl] start
+[workflow wf_sort_index.cwl] starting step sort
+[job step sort] job input {
+    "file:///home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl#sort/input_sort_bam": {
+        "class": "File", 
+        "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/inputs/merged.r2.bam", 
+        "size": 222658, 
+        "basename": "merged.r2.bam", 
+        "nameroot": "merged.r2", 
+        "nameext": ".bam"
+    }
+}
+[job step sort] evaluated job input to {
+    "file:///home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl#sort/input_sort_bam": {
+        "class": "File", 
+        "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/inputs/merged.r2.bam", 
+        "size": 222658, 
+        "basename": "merged.r2.bam", 
+        "nameroot": "merged.r2", 
+        "nameext": ".bam"
+    }
+}
+[step sort] start
+[job sort] keydictstr is {"/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/inputs/merged.r2.bam":[222658,1524257489810],"DockerRequirement":{"class":"DockerRequirement","dockerFile":"$import: samtools-Dockerfile","dockerPull":"scidap/samtools:v1.2-242-4d56437","id":"file:///home/bay001/projects/codebase/cwl-docker-test/cwl/samtools-docker.yml","name":"file:///home/bay001/projects/codebase/cwl-docker-test/cwl/samtools-docker.yml"},"cmdline":["samtools","sort","-o","merged.r2So.bam","/stage/merged.r2.bam"]} -> c5cf6900d611192aebc169beb2e111c6
+[job sort] Output of job will be cached in /home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6
+[job sort] initializing from file:///home/bay001/projects/codebase/cwl-docker-test/cwl/sort.cwl as part of step sort
+[job sort] {
+    "input_sort_bam": {
+        "class": "File", 
+        "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/inputs/merged.r2.bam", 
+        "size": 222658, 
+        "basename": "merged.r2.bam", 
+        "nameroot": "merged.r2", 
+        "nameext": ".bam"
+    }
+}
+[job sort] path mappings is {
+    "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/inputs/merged.r2.bam": [
+        "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/inputs/merged.r2.bam", 
+        "/tmp/tmpGINHqh/stg32abfb90-b3f7-4162-bf61-b6d21951982e/merged.r2.bam", 
+        "File", 
+        true
+    ]
+}
+[job sort] command line bindings is [
+    {
+        "position": [
+            -1000000, 
+            0
+        ], 
+        "datum": "samtools"
+    }, 
+    {
+        "position": [
+            -1000000, 
+            1
+        ], 
+        "datum": "sort"
+    }, 
+    {
+        "position": [
+            2, 
+            "output_file"
+        ], 
+        "prefix": "-o", 
+        "valueFrom": "${\n  if (inputs.output_file == \"\") {\n    return inputs.input_sort_bam.nameroot + \"So.bam\";\n  }\n  else {\n    return inputs.output_file;\n  }\n}\n", 
+        "datum": ""
+    }, 
+    {
+        "position": [
+            3, 
+            "input_sort_bam"
+        ], 
+        "datum": {
+            "class": "File", 
+            "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/inputs/merged.r2.bam", 
+            "size": 222658, 
+            "basename": "merged.r2.bam", 
+            "nameroot": "merged.r2", 
+            "nameext": ".bam", 
+            "path": "/tmp/tmpGINHqh/stg32abfb90-b3f7-4162-bf61-b6d21951982e/merged.r2.bam", 
+            "dirname": "/tmp/tmpGINHqh/stg32abfb90-b3f7-4162-bf61-b6d21951982e"
+        }
+    }
+]
+[job sort] /projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6$ samtools \
+    sort \
+    -o \
+    merged.r2So.bam \
+    /tmp/tmpGINHqh/stg32abfb90-b3f7-4162-bf61-b6d21951982e/merged.r2.bam
+[job sort] completed success
+[job sort] {
+    "output_sort_bam": {
+        "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+        "basename": "merged.r2So.bam", 
+        "nameext": ".bam", 
+        "nameroot": "merged.r2So", 
+        "http://commonwl.org/cwltool#generation": 0, 
+        "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "class": "File", 
+        "size": 222658
+    }
+}
+[step sort] produced output {
+    "file:///home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl#sort/output_sort_bam": {
+        "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+        "basename": "merged.r2So.bam", 
+        "nameext": ".bam", 
+        "nameroot": "merged.r2So", 
+        "http://commonwl.org/cwltool#generation": 0, 
+        "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "class": "File", 
+        "size": 222658
+    }
+}
+[step sort] completed success
+[job sort] Removing input staging directory /tmp/tmpGINHqh
+[job sort] Removing temporary directory /tmp/tmp2TMkdF
+[workflow wf_sort_index.cwl] starting step index
+[job step index] job input {
+    "file:///home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl#index/alignments": {
+        "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+        "basename": "merged.r2So.bam", 
+        "nameext": ".bam", 
+        "nameroot": "merged.r2So", 
+        "http://commonwl.org/cwltool#generation": 0, 
+        "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "class": "File", 
+        "size": 222658
+    }
+}
+[job step index] evaluated job input to {
+    "file:///home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl#index/alignments": {
+        "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+        "basename": "merged.r2So.bam", 
+        "nameext": ".bam", 
+        "nameroot": "merged.r2So", 
+        "http://commonwl.org/cwltool#generation": 0, 
+        "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "class": "File", 
+        "size": 222658
+    }
+}
+[step index] start
+unrecognized extension field `http://commonwl.org/cwltool#generation`.  Did you include a $schemas section?
+foreign properties set([])
+[job index] keydictstr is {"/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam":[222658,"sha1$662ae08aab9108f5f918c32489b87a0960d09405"],"DockerRequirement":{"class":"DockerRequirement","dockerFile":"$import: samtools-Dockerfile","dockerPull":"scidap/samtools:v1.2-242-4d56437","id":"file:///home/bay001/projects/codebase/cwl-docker-test/cwl/samtools-docker.yml","name":"file:///home/bay001/projects/codebase/cwl-docker-test/cwl/samtools-docker.yml"},"cmdline":["samtools","index","-b","merged.r2So.bam"]} -> 4a8d9df8157ac046def1bfef8775bb1b
+[job index] Output of job will be cached in /home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b
+unrecognized extension field `http://commonwl.org/cwltool#generation`.  Did you include a $schemas section?
+foreign properties set([])
+[job index] initializing from file:///home/bay001/projects/codebase/cwl-docker-test/cwl/samtools-index.cwl as part of step index
+[job index] {
+    "alignments": {
+        "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+        "basename": "merged.r2So.bam", 
+        "nameext": ".bam", 
+        "nameroot": "merged.r2So", 
+        "http://commonwl.org/cwltool#generation": 0, 
+        "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "class": "File", 
+        "size": 222658
+    }
+}
+[job index] path mappings is {
+    "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam": [
+        "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b/merged.r2So.bam", 
+        "File", 
+        false
+    ]
+}
+[job index] command line bindings is [
+    {
+        "position": [
+            -1000000, 
+            0
+        ], 
+        "datum": "samtools"
+    }, 
+    {
+        "position": [
+            -1000000, 
+            1
+        ], 
+        "datum": "index"
+    }, 
+    {
+        "position": [
+            -1000000, 
+            2
+        ], 
+        "datum": "-b"
+    }, 
+    {
+        "position": [
+            2, 
+            "alignments"
+        ], 
+        "valueFrom": "$(self.basename)", 
+        "datum": {
+            "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+            "basename": "merged.r2So.bam", 
+            "nameext": ".bam", 
+            "nameroot": "merged.r2So", 
+            "http://commonwl.org/cwltool#generation": 0, 
+            "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+            "path": "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b/merged.r2So.bam", 
+            "dirname": "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b", 
+            "class": "File", 
+            "size": 222658
+        }
+    }
+]
+[job index] initial work dir {
+    "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam": [
+        "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b/merged.r2So.bam", 
+        "File", 
+        true
+    ]
+}
+[job index] /projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b$ samtools \
+    index \
+    -b \
+    merged.r2So.bam
+[job index] completed success
+[job index] {
+    "alignments_with_index": {
+        "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+        "basename": "merged.r2So.bam", 
+        "nameext": ".bam", 
+        "nameroot": "merged.r2So", 
+        "http://commonwl.org/cwltool#generation": 0, 
+        "location": "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "secondaryFiles": [
+            {
+                "checksum": "sha1$de05627e39a738f693e450f99b78388210c59ddf", 
+                "basename": "merged.r2So.bam.bai", 
+                "nameroot": "merged.r2So.bam", 
+                "nameext": ".bai", 
+                "http://commonwl.org/cwltool#generation": 0, 
+                "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b/merged.r2So.bam.bai", 
+                "class": "File", 
+                "size": 472
+            }
+        ], 
+        "class": "File", 
+        "size": 222658
+    }
+}
+[step index] produced output {
+    "file:///home/bay001/projects/codebase/cwl-docker-test/cwl/wf_sort_index.cwl#index/alignments_with_index": {
+        "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+        "basename": "merged.r2So.bam", 
+        "nameext": ".bam", 
+        "nameroot": "merged.r2So", 
+        "http://commonwl.org/cwltool#generation": 0, 
+        "location": "/projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam", 
+        "secondaryFiles": [
+            {
+                "checksum": "sha1$de05627e39a738f693e450f99b78388210c59ddf", 
+                "basename": "merged.r2So.bam.bai", 
+                "nameroot": "merged.r2So.bam", 
+                "nameext": ".bai", 
+                "http://commonwl.org/cwltool#generation": 0, 
+                "location": "file:///projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b/merged.r2So.bam.bai", 
+                "class": "File", 
+                "size": 472
+            }
+        ], 
+        "class": "File", 
+        "size": 222658
+    }
+}
+[step index] completed success
+[workflow wf_sort_index.cwl] completed success
+[job index] Removing input staging directory /tmp/tmpdwZgi5
+[job index] Removing temporary directory /tmp/tmpNcJdgC
+Copying /projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/4a8d9df8157ac046def1bfef8775bb1b/merged.r2So.bam.bai to /home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/outdir/merged.r2So.bam.bai
+Copying /projects/ps-yeolab3/bay001/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/c5cf6900d611192aebc169beb2e111c6/merged.r2So.bam to /home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/outdir/merged.r2So.bam
+Removing intermediate output directory /home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/cwltool_interm/srio9l
+Final process status is success

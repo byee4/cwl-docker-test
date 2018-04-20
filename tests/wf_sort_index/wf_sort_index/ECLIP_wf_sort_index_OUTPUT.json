@@ -1,0 +1,20 @@
+{
+    "sorted_bam_file": {
+        "checksum": "sha1$662ae08aab9108f5f918c32489b87a0960d09405", 
+        "basename": "merged.r2So.bam", 
+        "location": "file:///home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/outdir/merged.r2So.bam", 
+        "path": "/home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/outdir/merged.r2So.bam", 
+        "secondaryFiles": [
+            {
+                "checksum": "sha1$de05627e39a738f693e450f99b78388210c59ddf", 
+                "basename": "merged.r2So.bam.bai", 
+                "location": "file:///home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/outdir/merged.r2So.bam.bai", 
+                "path": "/home/bay001/projects/codebase/cwl-docker-test/tests/wf_sort_index/wf_sort_index/.tmp/outdir/merged.r2So.bam.bai", 
+                "class": "File", 
+                "size": 472
+            }
+        ], 
+        "class": "File", 
+        "size": 222658
+    }
+}
