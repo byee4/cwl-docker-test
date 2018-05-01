@@ -21,13 +21,13 @@ MAINTAINER Brian Yee <brian.alan.yee@gmail.com>
 USER biodocker
 
 RUN conda install -y -c bioconda \
-pysam=0.6 \
-numpy=1.5.1 \
-scipy=0.11.0 \
-matplotlib=1.1.0 \
-pybedtools=0.5 \
-scikit-learn=0.6.1 \
-HTSeq=0.6.1
+pysam=0.12.1 \
+numpy=1.10.2 \
+scipy=0.16.0 \
+matplotlib=1.5.1 \
+pybedtools=0.7.10 \
+scikit-learn=0.17.1 \
+HTSeq=0.9.1
 
 RUN mkdir -p /opt; \
     cd /opt && \
