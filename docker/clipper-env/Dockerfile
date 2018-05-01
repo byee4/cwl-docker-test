@@ -21,7 +21,7 @@ MAINTAINER Brian Yee <brian.alan.yee@gmail.com>
 USER biodocker
 
 RUN conda install -y -c bioconda \
-pysam=0.12.1 \
+pysam=0.12.0.1 \
 numpy=1.10.2 \
 scipy=0.16.0 \
 matplotlib=1.5.1 \
