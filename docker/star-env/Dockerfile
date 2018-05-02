@@ -18,8 +18,8 @@ LABEL about.tags="Genomics"
 ################## MAINTAINER ######################
 MAINTAINER Brian Yee <brian.alan.yee@gmail.com>
 
-RUN conda install -y -c bioconda umi_tools
+RUN conda install -y -c bioconda star=2.4.0j
 
 WORKDIR /data/
 
-CMD ["umi_tools"]
+CMD ["STAR"]
