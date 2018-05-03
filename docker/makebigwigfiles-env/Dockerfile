@@ -4,13 +4,13 @@ FROM continuumio/miniconda:latest
 
 ################## METADATA ######################
 
-LABEL base_image="biocontainers:latest"
+LABEL base_image="continuumio/miniconda:latest"
 LABEL version="1"
-LABEL software="CLIPper"
+LABEL software="makebigwigfiles"
 LABEL software.version="0.2.1"
-LABEL about.summary="A tool to detect CLIP-seq peaks."
-LABEL about.home="http://www.htslib.org/"
-LABEL about.documentation="https://github.com/YeoLab/clipper/wiki/CLIPper-Home"
+LABEL about.summary="A tool that generates strand-specific bigwig files."
+LABEL about.home="https://github.com/yeolab/makebigwigfiles"
+LABEL about.documentation="https://github.com/yeolab/makebigwigfiles"
 LABEL about.license_file=""
 LABEL about.license=""
 LABEL about.tags="Genomics"

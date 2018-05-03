@@ -4,15 +4,15 @@ FROM continuumio/miniconda:latest
 
 ################## METADATA ######################
 
-LABEL base_image="biocontainers:latest"
+LABEL base_image="continuumio/miniconda:latest"
 LABEL version="1"
-LABEL software="CLIPper"
-LABEL software.version="0.2.1"
-LABEL about.summary="A tool to detect CLIP-seq peaks."
-LABEL about.home="http://www.htslib.org/"
-LABEL about.documentation="https://github.com/YeoLab/clipper/wiki/CLIPper-Home"
-LABEL about.license_file=""
-LABEL about.license=""
+LABEL software="cutadapt"
+LABEL software.version="1.14"
+LABEL about.summary="Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads."
+LABEL about.home="https://github.com/marcelm/cutadapt"
+LABEL about.documentation="http://cutadapt.readthedocs.io/en/stable/guide.html"
+LABEL about.license_file="https://github.com/marcelm/cutadapt/blob/v1.14/LICENSE"
+LABEL about.license="MIT"
 LABEL about.tags="Genomics"
 
 ################## MAINTAINER ######################

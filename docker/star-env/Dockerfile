@@ -6,12 +6,12 @@ FROM continuumio/miniconda:latest
 
 LABEL base_image="continuumio/miniconda:latest"
 LABEL version="1"
-LABEL software="umi_tools"
-LABEL software.version="0.5.3"
-LABEL about.summary="Tools for handling Unique Molecular Identifiers in NGS data sets"
-LABEL about.home="https://github.com/CGATOxford/UMI-tools"
-LABEL about.documentation="https://github.com/CGATOxford/UMI-tools"
-LABEL about.license_file="https://github.com/samtools/samtools/blob/develop/LICENSE"
+LABEL software="STAR"
+LABEL software.version="2.4.0j"
+LABEL about.summary="Spliced Transcripts Alignment to a Reference"
+LABEL about.home="https://github.com/alexdobin/STAR"
+LABEL about.documentation="https://github.com/alexdobin/STAR/blob/STAR_2.4.0j/doc/STARmanual.pdf"
+LABEL about.license_file="https://github.com/alexdobin/STAR/blob/STAR_2.4.0j/LICENSE"
 LABEL about.license=""
 LABEL about.tags="Genomics"
 

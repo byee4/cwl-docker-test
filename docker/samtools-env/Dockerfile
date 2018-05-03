@@ -1,10 +1,10 @@
 ################## BASE IMAGE ######################
 
-FROM biocontainers/biocontainers:latest
+FROM continuumio/miniconda:latest
 
 ################## METADATA ######################
 
-LABEL base_image="biocontainers:latest"
+LABEL base_image="continuumio/miniconda:latest"
 LABEL version="1"
 LABEL software="samtools"
 LABEL software.version="1.5"
